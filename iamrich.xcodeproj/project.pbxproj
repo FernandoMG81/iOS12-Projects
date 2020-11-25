@@ -40,10 +40,7 @@
 		3FC36972256D807800961B06 = {
 			isa = PBXGroup;
 			children = (
-				3FC36994256D80D500961B06 /* Storyboard */,
-				3FC36993256D80C200961B06 /* Controller */,
 				3FC3697D256D807800961B06 /* iamrich */,
-				3FC3697C256D807800961B06 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,11 +50,15 @@
 				3FC3697B256D807800961B06 /* iamrich.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3FC3697D256D807800961B06 /* iamrich */ = {
 			isa = PBXGroup;
 			children = (
+				3FC3697C256D807800961B06 /* Products */,
+				3FC36993256D80C200961B06 /* Controller */,
+				3FC36994256D80D500961B06 /* Storyboard */,
 				3FC3697E256D807800961B06 /* AppDelegate.swift */,
 				3FC36980256D807800961B06 /* SceneDelegate.swift */,
 				3FC36987256D807A00961B06 /* Assets.xcassets */,
