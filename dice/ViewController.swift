@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageViewDiceLeft: UIImageView!
     @IBOutlet weak var imageViewDiceRight: UIImageView!
+    @IBOutlet weak var labelTotalDices: UILabel!
     
     //Variables globales
     var randomDiceIndexLeft : Int = 0
@@ -44,8 +45,6 @@ class ViewController: UIViewController {
         randomDiceIndexLeft = Int(arc4random_uniform(nFaces))
         randomDiceIndexRight = Int(arc4random_uniform(nFaces))
         
-        
-        
         UIView.animate(withDuration: 0.5    ,
                        delay: 0,
                        options: UIView.AnimationOptions.curveEaseOut,
@@ -63,10 +62,33 @@ class ViewController: UIViewController {
             
             self.imageViewDiceLeft.image = UIImage(named: self.diceImages[self.randomDiceIndexLeft])
             self.imageViewDiceRight.image = UIImage(named: self.diceImages[self.randomDiceIndexRight])
+            
+            self.sumDices(numero1: self.randomDiceIndexLeft + 1, numero2: self.randomDiceIndexRight + 1)
+            print("n1: \(self.randomDiceIndexLeft + 1)")
+            print("n2: \(self.randomDiceIndexRight + 1)")
         }
 
         
     }
+    
+    func sumDices(numero1: Int, numero2 : Int){
+        
+        let totalDices: Int = numero1 + numero2
+        print("total: \(totalDices)")
+        
+        if totalDices < 10{
+            labelTotalDices.text = "0\(totalDices)"
+        }
+        else{
+            labelTotalDices.text = String(totalDices)
+        }
+        
+        
+    }
+    
+    
+    
+    //metodos shake
     
     override func becomeFirstResponder() -> Bool {
         return true
