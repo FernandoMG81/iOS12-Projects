@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="soypobre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOY POBRE" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXT-ym-uRH">
+                                <rect key="frame" x="107" y="137" width="160.5" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="500" id="BY6-CV-IFp"/>
+                                    <constraint firstAttribute="height" constant="44" id="CtB-s6-ifk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
+                            </label>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Pobre" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofz-iL-Vft">
+                                <rect key="frame" x="114.5" y="246" width="185.5" height="411"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="411" id="3fw-jA-PTN"/>
+                                    <constraint firstAttribute="width" constant="185.5" id="B3V-rW-bov"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udc-ow-t0e">
+                                <rect key="frame" x="100" y="741" width="214" height="72"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="215" id="5wU-Xp-zex"/>
+                                    <constraint firstAttribute="height" constant="72" id="pHx-UT-5Eq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="PÚLSAME">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hct-gs-1e5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="NXT-ym-uRH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="200-88-ZZi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Udc-ow-t0e" secondAttribute="bottom" constant="49" id="4ex-VP-Nhh"/>
+                            <constraint firstItem="Udc-ow-t0e" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="NXT-ym-uRH" secondAttribute="centerX" id="Out-bK-yeg"/>
+                            <constraint firstItem="Udc-ow-t0e" firstAttribute="top" secondItem="ofz-iL-Vft" secondAttribute="bottom" constant="84" id="R6O-bC-Xv1"/>
+                            <constraint firstItem="Udc-ow-t0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="VmX-mE-00P"/>
+                            <constraint firstItem="Udc-ow-t0e" firstAttribute="centerX" secondItem="ofz-iL-Vft" secondAttribute="centerX" id="btk-wW-FXR"/>
+                            <constraint firstItem="ofz-iL-Vft" firstAttribute="top" secondItem="NXT-ym-uRH" secondAttribute="bottom" constant="65" id="kJo-Wa-DfD"/>
+                            <constraint firstItem="NXT-ym-uRH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="r9a-It-uSH"/>
+                            <constraint firstItem="Udc-ow-t0e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u0i-jX-Oe9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonPush" destination="Udc-ow-t0e" id="BzZ-1p-Ark"/>
+                        <outlet property="imageViewPoor" destination="ofz-iL-Vft" id="LAO-bL-8C9"/>
+                        <outlet property="labelTittle" destination="NXT-ym-uRH" id="y2B-Xu-TMX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27.536231884057973" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pobre" width="185.5" height="263"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
