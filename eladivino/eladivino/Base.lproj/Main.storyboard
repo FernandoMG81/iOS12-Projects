@@ -25,12 +25,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2k5-Tj-tMl">
-                                <rect key="frame" x="163.5" y="426.5" width="87" height="43"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqp-rJ-vSA">
                                 <rect key="frame" x="51" y="762" width="312" height="80"/>
                                 <constraints>
@@ -45,24 +39,31 @@
                                     <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gtm-WS-fXD"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggo-nc-Ybj">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="TNc-3M-U2W"/>
+                                    <constraint firstAttribute="width" constant="250" id="VIj-Wt-pct"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wd7-SL-fGj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2U2-6Q-ktp"/>
+                            <constraint firstItem="ggo-nc-Ybj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7JO-zl-6ng"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mqp-rJ-vSA" secondAttribute="bottom" constant="20" id="9j1-7d-mxm"/>
+                            <constraint firstItem="ggo-nc-Ybj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cjw-bj-q0I"/>
                             <constraint firstItem="Wd7-SL-fGj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FOb-SM-HgO"/>
-                            <constraint firstItem="2k5-Tj-tMl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GRp-8v-dsK"/>
                             <constraint firstItem="EUR-cU-7cF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GoL-Nv-TRR"/>
                             <constraint firstItem="mqp-rJ-vSA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JI8-EH-AHT"/>
-                            <constraint firstItem="2k5-Tj-tMl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MnU-aQ-o9M"/>
                             <constraint firstItem="Wd7-SL-fGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SfT-9W-LUo"/>
                             <constraint firstItem="Wd7-SL-fGj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TmV-yo-wKc"/>
                             <constraint firstItem="EUR-cU-7cF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="cwd-8y-vqA"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="labelAswer" destination="2k5-Tj-tMl" id="XvK-0E-HnO"/>
+                        <outlet property="imageViewAnswers" destination="ggo-nc-Ybj" id="NSE-Bg-0Dr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
