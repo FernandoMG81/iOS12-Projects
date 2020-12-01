@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eladivino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clarividencia" translatesAutoresizingMaskIntoConstraints="NO" id="Wd7-SL-fGj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haz tu pregunta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUR-cU-7cF">
+                                <rect key="frame" x="108" y="59" width="198" height="33"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2k5-Tj-tMl">
+                                <rect key="frame" x="163.5" y="426.5" width="87" height="43"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqp-rJ-vSA">
+                                <rect key="frame" x="51" y="762" width="312" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="oDm-iu-DdG"/>
+                                    <constraint firstAttribute="height" constant="80" id="x4R-MB-iqb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="PREGUNTAR" backgroundImage="redbutton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gtm-WS-fXD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wd7-SL-fGj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2U2-6Q-ktp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mqp-rJ-vSA" secondAttribute="bottom" constant="20" id="9j1-7d-mxm"/>
+                            <constraint firstItem="Wd7-SL-fGj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FOb-SM-HgO"/>
+                            <constraint firstItem="2k5-Tj-tMl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GRp-8v-dsK"/>
+                            <constraint firstItem="EUR-cU-7cF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GoL-Nv-TRR"/>
+                            <constraint firstItem="mqp-rJ-vSA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JI8-EH-AHT"/>
+                            <constraint firstItem="2k5-Tj-tMl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MnU-aQ-o9M"/>
+                            <constraint firstItem="Wd7-SL-fGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SfT-9W-LUo"/>
+                            <constraint firstItem="Wd7-SL-fGj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TmV-yo-wKc"/>
+                            <constraint firstItem="EUR-cU-7cF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="cwd-8y-vqA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelAswer" destination="2k5-Tj-tMl" id="XvK-0E-HnO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clarividencia" width="923" height="923"/>
+        <image name="redbutton" width="312" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
