@@ -63,6 +63,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let row = indexPath.row
         let fontFamily = families[row]
         let familyFonts = fonts[fontFamily]!
+        print(familyFonts)
     }
 
 }
