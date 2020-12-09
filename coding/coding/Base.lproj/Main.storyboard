@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Fibonacci-->
         <scene sceneID="9qq-Mp-saL">
             <objects>
                 <viewController id="UYW-qZ-R9g" customClass="SecondViewController" customModule="coding" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,7 @@ quieres ver</string>
                             <constraint firstItem="ure-sw-c1S" firstAttribute="top" secondItem="V1V-J3-H7K" secondAttribute="bottom" constant="30" id="yZa-Va-g8I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="pencil.circle" catalog="system" id="1dq-VS-kym"/>
+                    <tabBarItem key="tabBarItem" title="Fibonacci" image="number.square.fill" catalog="system" id="1dq-VS-kym"/>
                     <connections>
                         <outlet property="labelGoldNum" destination="4mE-L4-6Ai" id="r0u-9c-lvp"/>
                         <outlet property="labelNumber" destination="Dtz-nd-rWF" id="qk6-fj-a1h"/>
@@ -103,7 +103,7 @@ quieres ver</string>
             </objects>
             <point key="canvasLocation" x="-1888.4057971014495" y="-59.598214285714285"/>
         </scene>
-        <!--Item 1-->
+        <!--Party-->
         <scene sceneID="jTt-IY-lU9">
             <objects>
                 <viewController id="BKn-e9-J1q" customClass="FirstViewController" customModule="coding" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,7 +160,7 @@ quieres ver</string>
                             <constraint firstItem="4OV-bK-86y" firstAttribute="leading" secondItem="eOf-BE-teH" secondAttribute="leading" constant="20" id="sVf-wG-dby"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="cube" catalog="system" id="R4D-WZ-yav"/>
+                    <tabBarItem key="tabBarItem" title="Party" image="greetingcard.fill" catalog="system" id="R4D-WZ-yav"/>
                     <connections>
                         <outlet property="labelAge" destination="AV0-0u-YyW" id="jrY-vF-r0Q"/>
                         <outlet property="sliderAge" destination="tFM-A9-Ypg" id="g3L-Gy-QlF"/>
@@ -189,7 +189,7 @@ quieres ver</string>
             </objects>
             <point key="canvasLocation" x="-1887" y="-927"/>
         </scene>
-        <!--Item-->
+        <!--Fonts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ThirdViewController" customModule="coding" customModuleProvider="target" sceneMemberID="viewController">
@@ -236,7 +236,7 @@ quieres ver</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UuB-jM-10B" secondAttribute="trailing" constant="20" id="zfV-tj-zor"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="externaldrive" catalog="system" id="axg-nV-9tl"/>
+                    <tabBarItem key="tabBarItem" title="Fonts" image="pencil" catalog="system" id="axg-nV-9tl"/>
                     <connections>
                         <outlet property="tableView" destination="UuB-jM-10B" id="fwC-cc-Vnr"/>
                     </connections>
@@ -327,9 +327,9 @@ quieres ver</string>
         </scene>
     </scenes>
     <resources>
-        <image name="cube" catalog="system" width="128" height="124"/>
-        <image name="externaldrive" catalog="system" width="128" height="88"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="greetingcard.fill" catalog="system" width="106" height="128"/>
+        <image name="number.square.fill" catalog="system" width="128" height="114"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
