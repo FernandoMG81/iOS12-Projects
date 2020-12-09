@@ -183,6 +183,7 @@ quieres ver</string>
                         <segue destination="BKn-e9-J1q" kind="relationship" relationship="viewControllers" id="xaQ-56-ypA"/>
                         <segue destination="UYW-qZ-R9g" kind="relationship" relationship="viewControllers" id="Wsd-e0-ZSH"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="w1j-KE-Ybr"/>
+                        <segue destination="AQR-oT-S5p" kind="relationship" relationship="viewControllers" id="p1v-Jq-jFO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPh-Hx-9k1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -306,6 +307,105 @@ quieres ver</string>
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="-60.267857142857139"/>
         </scene>
+        <!--IMC-->
+        <scene sceneID="FNz-LV-wxV">
+            <objects>
+                <viewController id="AQR-oT-S5p" customClass="FourthViewController" customModule="coding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Don-ak-Udz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione su peso en KG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="JW4-Dc-xXX">
+                                <rect key="frame" x="20" y="64" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione su altura en cm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ugo-Ry-PD4">
+                                <rect key="frame" x="20" y="220" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mP1-48-s3A">
+                                <rect key="frame" x="20" y="110" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4Vr-Pk-yCY"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="AQR-oT-S5p" id="wdU-vo-y5T"/>
+                                    <outlet property="delegate" destination="AQR-oT-S5p" id="Snv-Sj-sX9"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jiw-2T-1KF">
+                                <rect key="frame" x="20" y="266" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="yAi-Gd-u5n"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="AQR-oT-S5p" id="guD-dX-0Nh"/>
+                                    <outlet property="delegate" destination="AQR-oT-S5p" id="GlU-42-GoF"/>
+                                </connections>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbQ-iE-eSU">
+                                <rect key="frame" x="171" y="451" width="223" height="352"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfl-e8-m1R">
+                                <rect key="frame" x="30" y="386" width="354" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="KYh-VH-orB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="31"/>
+                                <state key="normal" title="CALCULAR"/>
+                                <connections>
+                                    <action selector="buttonCalculatePressed:" destination="AQR-oT-S5p" eventType="touchUpInside" id="5li-Xf-e51"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="iQs-DL-LjO">
+                                <rect key="frame" x="50" y="451" width="71" height="52"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YYT-OX-7Zp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YYT-OX-7Zp" firstAttribute="trailing" secondItem="Ugo-Ry-PD4" secondAttribute="trailing" constant="20" id="2hU-jO-C1p"/>
+                            <constraint firstItem="JW4-Dc-xXX" firstAttribute="top" secondItem="YYT-OX-7Zp" secondAttribute="top" constant="20" id="2q4-7j-TWY"/>
+                            <constraint firstItem="wbQ-iE-eSU" firstAttribute="top" secondItem="jfl-e8-m1R" secondAttribute="bottom" constant="10" id="6Rf-8h-6co"/>
+                            <constraint firstItem="YYT-OX-7Zp" firstAttribute="trailing" secondItem="mP1-48-s3A" secondAttribute="trailing" constant="20" id="6aJ-xR-cst"/>
+                            <constraint firstItem="mP1-48-s3A" firstAttribute="leading" secondItem="YYT-OX-7Zp" secondAttribute="leading" constant="20" id="8et-sX-Mh0"/>
+                            <constraint firstItem="Ugo-Ry-PD4" firstAttribute="leading" secondItem="YYT-OX-7Zp" secondAttribute="leading" constant="20" id="Ljo-7b-kQ7"/>
+                            <constraint firstItem="jfl-e8-m1R" firstAttribute="top" secondItem="jiw-2T-1KF" secondAttribute="bottom" constant="20" id="LmM-lZ-09H"/>
+                            <constraint firstItem="YYT-OX-7Zp" firstAttribute="trailing" secondItem="jiw-2T-1KF" secondAttribute="trailing" constant="20" id="SJO-ju-rRK"/>
+                            <constraint firstItem="wbQ-iE-eSU" firstAttribute="leading" secondItem="iQs-DL-LjO" secondAttribute="trailing" constant="50" id="SNg-7j-L33"/>
+                            <constraint firstItem="JW4-Dc-xXX" firstAttribute="leading" secondItem="YYT-OX-7Zp" secondAttribute="leading" constant="20" id="XOX-Ua-DIh"/>
+                            <constraint firstItem="mP1-48-s3A" firstAttribute="top" secondItem="JW4-Dc-xXX" secondAttribute="bottom" constant="5" id="ZPz-NO-Rqp"/>
+                            <constraint firstItem="YYT-OX-7Zp" firstAttribute="trailing" secondItem="wbQ-iE-eSU" secondAttribute="trailing" constant="20" id="ZkO-o0-hz6"/>
+                            <constraint firstItem="jiw-2T-1KF" firstAttribute="top" secondItem="Ugo-Ry-PD4" secondAttribute="bottom" constant="5" id="bs5-zx-8tT"/>
+                            <constraint firstItem="iQs-DL-LjO" firstAttribute="leading" secondItem="YYT-OX-7Zp" secondAttribute="leading" constant="50" id="bxK-Au-Tc9"/>
+                            <constraint firstItem="Ugo-Ry-PD4" firstAttribute="top" secondItem="mP1-48-s3A" secondAttribute="bottom" constant="10" id="eAA-nn-SA4"/>
+                            <constraint firstItem="jfl-e8-m1R" firstAttribute="leading" secondItem="YYT-OX-7Zp" secondAttribute="leading" constant="30" id="ffa-rX-3gg"/>
+                            <constraint firstItem="iQs-DL-LjO" firstAttribute="top" secondItem="jfl-e8-m1R" secondAttribute="bottom" constant="10" id="hEB-8x-Rlp"/>
+                            <constraint firstItem="YYT-OX-7Zp" firstAttribute="trailing" secondItem="jfl-e8-m1R" secondAttribute="trailing" constant="30" id="kio-aZ-f4O"/>
+                            <constraint firstItem="YYT-OX-7Zp" firstAttribute="bottom" secondItem="wbQ-iE-eSU" secondAttribute="bottom" constant="10" id="oGh-9b-m2k"/>
+                            <constraint firstItem="jiw-2T-1KF" firstAttribute="leading" secondItem="YYT-OX-7Zp" secondAttribute="leading" constant="20" id="sTW-Yl-seJ"/>
+                            <constraint firstItem="YYT-OX-7Zp" firstAttribute="trailing" secondItem="JW4-Dc-xXX" secondAttribute="trailing" constant="20" id="u7V-8w-4yM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="IMC" image="cross.circle.fill" catalog="system" id="gV5-cq-0ZW"/>
+                    <connections>
+                        <outlet property="imageIMC" destination="wbQ-iE-eSU" id="2CI-0T-zaT"/>
+                        <outlet property="labelResult" destination="iQs-DL-LjO" id="wHJ-nq-be6"/>
+                        <outlet property="pickerViewHeight" destination="jiw-2T-1KF" id="k5c-JP-Y77"/>
+                        <outlet property="pickerViewWeight" destination="mP1-48-s3A" id="OY6-36-Hxa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Acg-i9-Zfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857.9710144927537" y="-60.267857142857139"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="KRv-Ix-x3t">
             <objects>
@@ -327,6 +427,7 @@ quieres ver</string>
         </scene>
     </scenes>
     <resources>
+        <image name="cross.circle.fill" catalog="system" width="128" height="121"/>
         <image name="greetingcard.fill" catalog="system" width="106" height="128"/>
         <image name="number.square.fill" catalog="system" width="128" height="114"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
