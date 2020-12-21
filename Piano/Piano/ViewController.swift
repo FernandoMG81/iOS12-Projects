@@ -9,15 +9,20 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    @IBOutlet weak var decibelsLabel: UILabel!
+    @IBOutlet weak var volumeSlider: UISlider!
     
     var audioPlayer1 : AVAudioPlayer!
-    var audioPlayer2 : AVAudioPlayer!
     var channel = true
     let soundsArray = ["c1","c1s","d1","d1s","e1","f1","f1s","g1","g1s","a1","a1s","b1","c2"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        decibelsLabel.transform =  CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+        decibelsLabel.transform =  CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+        volumeSlider.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+        volumeSlider.value = 0.5
+        
         // Do any additional setup after loading the view.
     }
 
@@ -28,25 +33,26 @@ class ViewController: UIViewController {
         
         if let soundURL : URL = Bundle.main.url(forResource: fileName, withExtension: "mp3"){
         do {
-            if channel{
-                audioPlayer1 = try AVAudioPlayer.init(contentsOf: soundURL)
-                channel = false
-            } else {
-                audioPlayer2 = try AVAudioPlayer.init(contentsOf: soundURL)
-                channel = true
-            }
+            audioPlayer1 = try AVAudioPlayer.init(contentsOf: soundURL)
          } catch{
             print(error)
         }
-            if !channel{
-                audioPlayer1.play()
-            } else {
-                audioPlayer2.play()
-            }
-            
+            audioPlayer1.play()
+            audioPlayer1.volume = self.volumeSlider.value
+            audioPlayer1.isMeteringEnabled = true
+            audioPlayer1.updateMeters()
+            decibelsLabel.text = ("\(audioPlayer1.averagePower(forChannel: 0))Db")
+            print(audioPlayer1.volume)
         }
     }
     
-
+    @IBAction func volumeChanged(_ sender: UISlider) {
+        
+        self.audioPlayer1?.volume = Float(sender.value)
+        //self.decibelsLabel.text = ("\(audioPlayer1.averagePower(forChannel: 0))Db")
+//        print(audioPlayer1.volume)
+        
+    }
+    
 }
 

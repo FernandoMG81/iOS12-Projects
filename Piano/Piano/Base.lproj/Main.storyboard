@@ -235,6 +235,23 @@
                                     <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CPO-Cm-zBx"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JMa-Hn-kz5">
+                                <rect key="frame" x="246" y="320" width="241" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="BpB-kp-j5s"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setVolumeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="A11-zk-xit"/>
+                                    <action selector="volumeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OKe-UZ-dLy"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decibeles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYZ-AS-Cpe">
+                                <rect key="frame" x="320" y="507" width="93" height="23"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -244,6 +261,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="avH-bI-oEy" secondAttribute="trailing" constant="16" id="1Yb-Md-Y14"/>
                             <constraint firstItem="jcd-4n-ts6" firstAttribute="height" secondItem="rFn-ax-9Ks" secondAttribute="height" id="1ok-aB-H3S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q5B-Ab-qFg" secondAttribute="trailing" constant="16" id="2aP-Kf-QwQ"/>
+                            <constraint firstItem="yYZ-AS-Cpe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="320" id="381-jy-6GI"/>
                             <constraint firstItem="GqY-ZY-fp7" firstAttribute="top" secondItem="Q5B-Ab-qFg" secondAttribute="bottom" constant="8" id="6HE-bl-11o"/>
                             <constraint firstItem="vgt-gC-cEx" firstAttribute="width" secondItem="QCg-FP-LLm" secondAttribute="width" id="7IY-ep-wdb"/>
                             <constraint firstItem="sAd-ws-pXd" firstAttribute="top" secondItem="rFn-ax-9Ks" secondAttribute="bottom" constant="8" id="7kt-1M-Faj"/>
@@ -251,6 +269,7 @@
                             <constraint firstItem="I2O-gA-883" firstAttribute="height" secondItem="rFn-ax-9Ks" secondAttribute="height" id="Al4-F3-cIm"/>
                             <constraint firstItem="5o9-db-dlE" firstAttribute="top" secondItem="kCR-8d-Te5" secondAttribute="bottom" constant="36" id="CL7-Jb-YqO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GqY-ZY-fp7" secondAttribute="trailing" constant="16" id="FcU-Bt-scd"/>
+                            <constraint firstItem="JMa-Hn-kz5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="248" id="Fkh-ff-UTH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k8j-Bt-3Ay" secondAttribute="trailing" constant="16" id="G9h-Yp-lMO"/>
                             <constraint firstItem="0Bt-iU-RCZ" firstAttribute="top" secondItem="avH-bI-oEy" secondAttribute="bottom" constant="8" id="GYU-bz-IZJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QCg-FP-LLm" secondAttribute="trailing" constant="16" id="Gtj-86-TrE"/>
@@ -261,15 +280,18 @@
                             <constraint firstItem="kCR-8d-Te5" firstAttribute="height" secondItem="QCg-FP-LLm" secondAttribute="height" id="JYY-Fg-Xa5"/>
                             <constraint firstItem="5o9-db-dlE" firstAttribute="width" secondItem="QCg-FP-LLm" secondAttribute="width" id="JYg-OX-9sz"/>
                             <constraint firstItem="Q5B-Ab-qFg" firstAttribute="height" secondItem="rFn-ax-9Ks" secondAttribute="height" id="KfL-1C-xMz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JMa-Hn-kz5" secondAttribute="bottom" constant="318" id="Kzu-EN-PLO"/>
                             <constraint firstItem="avH-bI-oEy" firstAttribute="height" secondItem="rFn-ax-9Ks" secondAttribute="height" id="Lbf-KM-VQb"/>
                             <constraint firstItem="vgt-gC-cEx" firstAttribute="height" secondItem="QCg-FP-LLm" secondAttribute="height" id="NPk-1O-roD"/>
                             <constraint firstItem="sAd-ws-pXd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ON5-3s-mSc"/>
+                            <constraint firstItem="JMa-Hn-kz5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="320" id="RxP-zR-dP3"/>
                             <constraint firstItem="I2O-gA-883" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="S2H-H7-Xis"/>
                             <constraint firstItem="k8j-Bt-3Ay" firstAttribute="top" secondItem="5o9-db-dlE" secondAttribute="bottom" constant="39.5" id="TCT-Fn-uH0"/>
                             <constraint firstItem="k8j-Bt-3Ay" firstAttribute="width" secondItem="QCg-FP-LLm" secondAttribute="width" id="TMg-hE-Bgq"/>
                             <constraint firstItem="QCg-FP-LLm" firstAttribute="height" secondItem="rFn-ax-9Ks" secondAttribute="height" multiplier="0.6" id="WK4-oe-5GV"/>
                             <constraint firstItem="QCg-FP-LLm" firstAttribute="width" secondItem="rFn-ax-9Ks" secondAttribute="width" multiplier="0.65" id="WQT-6y-VvN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vgt-gC-cEx" secondAttribute="trailing" constant="16" id="Xb6-jC-tIE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yYZ-AS-Cpe" secondAttribute="bottom" constant="137" id="Z8a-Yt-axO"/>
                             <constraint firstItem="jcd-4n-ts6" firstAttribute="top" secondItem="0Bt-iU-RCZ" secondAttribute="bottom" constant="8" id="ZCC-MO-pH3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5o9-db-dlE" secondAttribute="trailing" constant="16" id="cCM-z1-4fp"/>
                             <constraint firstItem="k8j-Bt-3Ay" firstAttribute="height" secondItem="QCg-FP-LLm" secondAttribute="height" id="dET-dV-GsK"/>
@@ -282,9 +304,11 @@
                             <constraint firstItem="Q5B-Ab-qFg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hQr-1Q-Ut4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GqY-ZY-fp7" secondAttribute="bottom" constant="8" id="hoQ-Lz-VGs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rFn-ax-9Ks" secondAttribute="trailing" constant="16" id="ncK-KD-p5b"/>
+                            <constraint firstItem="JMa-Hn-kz5" firstAttribute="centerX" secondItem="yYZ-AS-Cpe" secondAttribute="centerX" id="pVP-Uh-OVJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QCg-FP-LLm" secondAttribute="trailing" constant="16" id="qCa-kc-jMr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Bt-iU-RCZ" secondAttribute="trailing" constant="16" id="qMI-d4-n5R"/>
                             <constraint firstItem="0Bt-iU-RCZ" firstAttribute="height" secondItem="rFn-ax-9Ks" secondAttribute="height" id="qzI-1c-tUH"/>
+                            <constraint firstItem="yYZ-AS-Cpe" firstAttribute="top" secondItem="JMa-Hn-kz5" secondAttribute="bottom" constant="158" id="rfH-xM-Dm1"/>
                             <constraint firstItem="GqY-ZY-fp7" firstAttribute="height" secondItem="rFn-ax-9Ks" secondAttribute="height" id="tli-mF-YIM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jcd-4n-ts6" secondAttribute="trailing" constant="16" id="uox-S1-5bs"/>
                             <constraint firstItem="avH-bI-oEy" firstAttribute="top" secondItem="vgt-gC-cEx" secondAttribute="bottom" constant="65" id="vEj-VN-a6K"/>
@@ -295,6 +319,10 @@
                             <constraint firstItem="kCR-8d-Te5" firstAttribute="width" secondItem="QCg-FP-LLm" secondAttribute="width" id="yX0-cF-oMa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="decibelsLabel" destination="yYZ-AS-Cpe" id="pj6-xw-xbr"/>
+                        <outlet property="volumeSlider" destination="JMa-Hn-kz5" id="JQW-Dx-KIZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,6 +332,9 @@
     <resources>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
