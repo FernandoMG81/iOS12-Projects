@@ -59,8 +59,8 @@
 				3FC369A32570699800961B06 /* Products */,
 				3FC369BB257069CF00961B06 /* Storyboard */,
 				3FC369BA257069C400961B06 /* Controller */,
-				3FC369A52570699800961B06 /* AppDelegate.swift */,
 				3FC369A72570699800961B06 /* SceneDelegate.swift */,
+				3FC369A52570699800961B06 /* AppDelegate.swift */,
 				3FC369AE2570699F00961B06 /* Assets.xcassets */,
 				3FC369B32570699F00961B06 /* Info.plist */,
 			);
