@@ -16,6 +16,7 @@
 		3FD0C33A25DE12C000F42D1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0C33925DE12C000F42D1A /* Extensions.swift */; };
 		3FD0C34625E06AC900F42D1A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0C34525E06AC900F42D1A /* Question.swift */; };
 		3FD0C34A25E0723400F42D1A /* QuestionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0C34925E0723400F42D1A /* QuestionsFactory.swift */; };
+		3FD0C34D25E080BF00F42D1A /* QuestionsBank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C34C25E080BF00F42D1A /* QuestionsBank.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3FD0C33925DE12C000F42D1A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../Piano/Piano/Extensions.swift; sourceTree = "<group>"; };
 		3FD0C34525E06AC900F42D1A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		3FD0C34925E0723400F42D1A /* QuestionsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsFactory.swift; sourceTree = "<group>"; };
+		3FD0C34C25E080BF00F42D1A /* QuestionsBank.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = QuestionsBank.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				3FD0C32825DE09FC00F42D1A /* Info.plist */,
 				3FD0C32525DE09FC00F42D1A /* LaunchScreen.storyboard */,
+				3FD0C34C25E080BF00F42D1A /* QuestionsBank.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD0C34D25E080BF00F42D1A /* QuestionsBank.plist in Resources */,
 				3FD0C32725DE09FC00F42D1A /* LaunchScreen.storyboard in Resources */,
 				3FD0C32425DE09FC00F42D1A /* Assets.xcassets in Resources */,
 				3FD0C32225DE09F300F42D1A /* Main.storyboard in Resources */,
