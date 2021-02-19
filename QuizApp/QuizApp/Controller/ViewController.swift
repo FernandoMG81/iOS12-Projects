@@ -20,12 +20,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+     
+        
+        
+        
     }
 
 
     @IBAction func buttonPress(_ sender: UIButton) {
-        
+        let factory = QuestionsFactory()
+        let questions = factory.getRandomQuestion()
+        print(questions)
         
     }
     
