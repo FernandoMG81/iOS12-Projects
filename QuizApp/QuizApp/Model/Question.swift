@@ -8,10 +8,19 @@
 import Foundation
 
 
-class Question : CustomStringConvertible {
-    let questionText : String
+class Question : CustomStringConvertible, Codable {
+    let question : String
     let answer: Bool
-//    let answerExplanation : String
+    let explanation : String
+    
+    //Se genera para linkear los nombres de los campos en la questionList
+    //si son distintos, si son iguales no es necesario
+    /*enum CodingKeys : String, CodingKey {
+        case questionText = "question"
+        case answer = "answer"
+        case answerExplanation = "explanation"
+    }*/
+    
     
     //Variable que sobreescribimos para darle formato cuando se imprimi
     //Hay que agregar el protocolo CustomStringConvertible
@@ -19,14 +28,19 @@ class Question : CustomStringConvertible {
         let respuesta = (answer ? "Verdadera" : "Falsa")
         return """
             Pregunta:
-                - \(questionText)
-                - Respuesta : \(respuesta)
+                - \(question)
+                - Respuesta: \(respuesta)
+                - Explicación: \(explanation)
         """
     }
     
-    init(text : String, correctAnswer : Bool/*, answer:String*/) {
-        self.questionText = text
+    init(text : String, correctAnswer : Bool, answer:String) {
+        self.question = text
         self.answer = correctAnswer
-//        self.answerExplanation = answer
+        self.explanation = answer
     }
+}
+
+struct QuestionsBank : Codable {
+    var questions : [Question]
 }

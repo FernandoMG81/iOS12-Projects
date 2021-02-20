@@ -30,8 +30,7 @@ class ViewController: UIViewController {
     @IBAction func buttonPress(_ sender: UIButton) {
         let factory = QuestionsFactory()
         let questions = factory.getRandomQuestion()
-        print(questions)
-        
+        labelQuestion.text = "\(questions)"
     }
     
     //setear el color de la barra de estado

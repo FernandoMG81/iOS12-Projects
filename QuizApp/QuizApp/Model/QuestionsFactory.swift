@@ -9,66 +9,51 @@ import Foundation
 
 class QuestionsFactory {
     
-    var questions = [Question]()
+    var questionsBank : QuestionsBank!
     
     
     init() {
+        //PROCESADO MANUAL DE PLIST
+        /*
+        if let path = Bundle.main.path(forResource: "QuestionsBank", ofType: "plist"){
+            if let plist = NSDictionary(contentsOfFile: path){
+                let questionData = plist["questions"] as! [AnyObject]
+                
+                for question in questionData{
+                    if let text = question["question"], let ans = question["answer"], let expl = question["explanation"]{
+                        questions.append(Question(text: text as! String, correctAnswer: ans as! Bool, answer: expl as! String))
+                    }
+                }
+            }
+        }*/
         
-                
-        questions.append(Question(text: "", correctAnswer: true))
-                
-        questions.append(Question(text: "", correctAnswer: false))
-                
-        questions.append(Question(text: "", correctAnswer: true))
-                
-        questions.append(Question(text: "", correctAnswer: false))
-                
-        questions.append(Question(text: "", correctAnswer: false))
-         
-        questions.append(Question(text: "", correctAnswer: true))
-                
-        questions.append(Question(text: "", correctAnswer: true))
-                
-        questions.append(Question(text: "", correctAnswer: true))
-                
-        questions.append(Question(text: "", correctAnswer: false))
-                
-        questions.append(Question(text: "", correctAnswer: true))
-                
-        questions.append(Question(text: "", correctAnswer: true))
-         
-        questions.append(Question(text: "", correctAnswer: true))
-         
-        questions.append(Question(text: "", correctAnswer: false))
-         
-        questions.append(Question(text: "", correctAnswer: true))
-         
-        questions.append(Question(text: "", correctAnswer: true))
-         
-        questions.append(Question(text: "", correctAnswer: true))
-         
-        questions.append(Question(text: "", correctAnswer: true))
-         
-        questions.append(Question(text: "", correctAnswer: true))
-         
-        questions.append(Question(text: "", correctAnswer: true))
+        //PROCESADO CON CODABLE
         
+        do {
+            if let url = Bundle.main.url(forResource: "QuestionsBank", withExtension: "plist"){
+                let data = try Data(contentsOf: url)
+                self.questionsBank = try PropertyListDecoder().decode(QuestionsBank.self, from: data)
+                
+            }
+        } catch {
+            print(error)
+        }
         
     }
     
     
     func getQuestionAt(index: Int) -> Question?{
-        if index < 0 || index > questions.count{
+        if index < 0 || index > self.questionsBank.questions.count{
             return nil
         }
         else{
-            return questions[index]
+            return self.questionsBank.questions[index]
         }
     }
     
     func getRandomQuestion() -> Question {
-        let index = Int(arc4random_uniform(UInt32(questions.count)))
-        return questions[index]
+        let index = Int(arc4random_uniform(UInt32(self.questionsBank.questions.count)))
+        return self.questionsBank.questions[index]
     }
     
 }
