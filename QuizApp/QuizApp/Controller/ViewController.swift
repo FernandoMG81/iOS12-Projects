@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -23,6 +24,8 @@ class ViewController: UIViewController {
     var correctQuestionAnswered = 0
     var currentQuestion : Question!
     let factory = QuestionsFactory()
+    var audioPlayer : AVAudioPlayer!
+
     
     
     override func viewDidLoad() {
@@ -76,10 +79,46 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    func playSound(correct : Bool) {
+        
+        if correct{
+            if let soundURL : URL = Bundle.main.url(forResource: sounds.correct.rawValue, withExtension: "mp3"){
+                do {
+                    self.audioPlayer = try AVAudioPlayer.init(contentsOf: soundURL)
+                } catch {
+                    print(error)
+                }
+                audioPlayer.play()
+            }
+        }else{
+            if let soundURL : URL = Bundle.main.url(forResource: sounds.wrong.rawValue, withExtension: "mp3"){
+                do {
+                    self.audioPlayer = try AVAudioPlayer.init(contentsOf: soundURL)
+                } catch {
+                    print(error)
+                }
+                audioPlayer.play()
+            }
+        }
+    }
 
 
     @IBAction func buttonPress(_ sender: UIButton) {
         
+        /*if let soundURL : URL = Bundle.main.url(forResource: fileName, withExtension: "mp3"){
+        do {
+            audioPlayer1 = try AVAudioPlayer.init(contentsOf: soundURL)
+         } catch{
+            print(error)
+        }
+            audioPlayer1.play()
+            audioPlayer1.volume = self.volumeSlider.value
+            audioPlayer1.isMeteringEnabled = true
+            audioPlayer1.updateMeters()
+            decibelsLabel.text = ("\(audioPlayer1.averagePower(forChannel: 0))Db")
+            print(audioPlayer1.volume)
+        }*/
         var isCorrect : Bool
         if sender.tag == 1{
             //el usuario a cliqueado el verdadero
@@ -96,13 +135,14 @@ class ViewController: UIViewController {
             //title = "Enhorabuena !"
             self.currentScore += 100*self.correctQuestionAnswered
             ProgressHUD.showSucceed("\(NSLocalizedString("question.ok", comment: ""))\n\(self.currentQuestion.explanation)")
+            playSound(correct: true)
         }else{
             ProgressHUD.showError("\(NSLocalizedString("question.ko", comment: ""))\n\(self.currentQuestion.explanation)")
+            playSound(correct: false)
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.askNextQuestion()
             self.updateUIElement()
-            
         }
         
         
@@ -132,3 +172,7 @@ class ViewController: UIViewController {
     
 }
 
+enum sounds : String{
+    case correct = "correct"
+    case wrong = "wrong"
+}

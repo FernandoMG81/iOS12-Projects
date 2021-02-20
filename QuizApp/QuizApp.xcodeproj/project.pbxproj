@@ -19,6 +19,8 @@
 		3FD0C35125E0AC6C00F42D1A /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0C35025E0AC6C00F42D1A /* ProgressHUD.swift */; };
 		3FD0C35325E0B8B600F42D1A /* QuestionsBank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C35525E0B8B600F42D1A /* QuestionsBank.plist */; };
 		3FD0C35F25E0C05F00F42D1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C36125E0C05F00F42D1A /* Localizable.strings */; };
+		3FD0C36E25E1CDF100F42D1A /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C36C25E1CDF100F42D1A /* correct.mp3 */; };
+		3FD0C36F25E1CDF100F42D1A /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C36D25E1CDF100F42D1A /* wrong.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		3FD0C36325E0C1D600F42D1A /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
 		3FD0C36525E0C1D600F42D1A /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "es-419"; path = "es-419.lproj/QuestionsBank.plist"; sourceTree = "<group>"; };
 		3FD0C36625E0C1D600F42D1A /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3FD0C36C25E1CDF100F42D1A /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		3FD0C36D25E1CDF100F42D1A /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		3FD0C31925DE09F300F42D1A /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FD0C36B25E1CDB500F42D1A /* Sounds */,
 				3FD0C33125DE0C8700F42D1A /* View */,
 				3FD0C33425DE0CF000F42D1A /* Supporting Files */,
 				3FD0C33225DE0CA500F42D1A /* Controller */,
@@ -120,6 +125,15 @@
 				3FD0C36125E0C05F00F42D1A /* Localizable.strings */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FD0C36B25E1CDB500F42D1A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3FD0C36C25E1CDF100F42D1A /* correct.mp3 */,
+				3FD0C36D25E1CDF100F42D1A /* wrong.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +196,11 @@
 			files = (
 				3FD0C35F25E0C05F00F42D1A /* Localizable.strings in Resources */,
 				3FD0C35325E0B8B600F42D1A /* QuestionsBank.plist in Resources */,
+				3FD0C36F25E1CDF100F42D1A /* wrong.mp3 in Resources */,
 				3FD0C32725DE09FC00F42D1A /* LaunchScreen.storyboard in Resources */,
 				3FD0C32425DE09FC00F42D1A /* Assets.xcassets in Resources */,
 				3FD0C32225DE09F300F42D1A /* Main.storyboard in Resources */,
+				3FD0C36E25E1CDF100F42D1A /* correct.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
