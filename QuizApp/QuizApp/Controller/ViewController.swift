@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     
     func gameOver(){
         //metodo para cuando no hay mas preguntas
-        let alert = UIAlertController(title: "Fin de la partida", message: "Has acertado \(self.correctQuestionAnswered) / \(self.currentQuestionID)", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("game.over.title", comment: "Titulo del pop up del game over"), message: "\(NSLocalizedString("game.over.message1", comment: "")) \(self.correctQuestionAnswered) / \(self.currentQuestionID). \(NSLocalizedString("game.over.message2", comment: ""))", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             self.startGame()
         }
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     func updateUIElement(){
-        self.labelScore.text = "Puntuación: \(self.currentScore)"
+        self.labelScore.text = "\(NSLocalizedString("score.text", comment: "")) \(self.currentScore)"
         self.labelQuestionNumber.text = "\(self.currentQuestionID) / \(self.factory.questionsBank.questions.count)"
         
         for constraint in self.progressBar.constraints {
@@ -89,14 +89,25 @@ class ViewController: UIViewController {
             isCorrect = (self.currentQuestion.answer == false)
         }
         
-        var title = "Has fallado =("
+        //var title = "Has fallado =("
         
         if isCorrect{
             self.correctQuestionAnswered += 1
-            title = "Enhorabuena !"
+            //title = "Enhorabuena !"
             self.currentScore += 100*self.correctQuestionAnswered
+            ProgressHUD.showSucceed("\(NSLocalizedString("question.ok", comment: ""))\n\(self.currentQuestion.explanation)")
+        }else{
+            ProgressHUD.showError("\(NSLocalizedString("question.ko", comment: ""))\n\(self.currentQuestion.explanation)")
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.askNextQuestion()
+            self.updateUIElement()
+            
         }
         
+        
+        //ALERTAS VIEJAS
+        /*
         let alert = UIAlertController(title: title, message: self.currentQuestion.explanation, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             self.askNextQuestion()
@@ -104,9 +115,8 @@ class ViewController: UIViewController {
         }
         
         alert.addAction(okAction)
-        
         present(alert, animated: true, completion: nil)
-        
+        */
         
     }
     
