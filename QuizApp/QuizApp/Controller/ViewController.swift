@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         //Metodo para mezclar las preguntas
         self.factory.questionsBank.questions.shuffle()
         askNextQuestion()
+        updateUIElement()
     }
     
     func askNextQuestion() {
@@ -54,10 +55,31 @@ class ViewController: UIViewController {
     
     func gameOver(){
         //metodo para cuando no hay mas preguntas
+        let alert = UIAlertController(title: "Fin de la partida", message: "Has acertado \(self.correctQuestionAnswered) / \(self.currentQuestionID)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            self.startGame()
+        }
+        
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func updateUIElement(){
+        self.labelScore.text = "Puntuación: \(self.currentScore)"
+        self.labelQuestionNumber.text = "\(self.currentQuestionID) / \(self.factory.questionsBank.questions.count)"
+        
+        for constraint in self.progressBar.constraints {
+            if constraint.identifier == "barWidth"{
+                constraint.constant = self.view.frame.size.width/CGFloat(self.factory.questionsBank.questions.count)*CGFloat(self.currentQuestionID)
+            }
+        }
+        
     }
 
 
     @IBAction func buttonPress(_ sender: UIButton) {
+        
         var isCorrect : Bool
         if sender.tag == 1{
             //el usuario a cliqueado el verdadero
@@ -67,11 +89,25 @@ class ViewController: UIViewController {
             isCorrect = (self.currentQuestion.answer == false)
         }
         
+        var title = "Has fallado =("
+        
         if isCorrect{
             self.correctQuestionAnswered += 1
+            title = "Enhorabuena !"
+            self.currentScore += 100*self.correctQuestionAnswered
         }
         
-        askNextQuestion()
+        let alert = UIAlertController(title: title, message: self.currentQuestion.explanation, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            self.askNextQuestion()
+            self.updateUIElement()
+        }
+        
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+        
+        
     }
     
     //setear el color de la barra de estado

@@ -43,7 +43,7 @@ class QuestionsFactory {
     
     
     func getQuestionAt(index: Int) -> Question?{
-        if index < 0 || index > self.questionsBank.questions.count{
+        if index < 0 || index >= self.questionsBank.questions.count{
             return nil
         }
         else{
