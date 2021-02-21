@@ -23,8 +23,9 @@ class ViewController: UIViewController {
     var currentQuestionID = 0
     var correctQuestionAnswered = 0
     var currentQuestion : Question!
-    let factory = QuestionsFactory()
+    var factory = QuestionsFactory()
     var audioPlayer : AVAudioPlayer!
+    let limitQuestions = 10
 
     
     
@@ -41,6 +42,8 @@ class ViewController: UIViewController {
         
         //Metodo para mezclar las preguntas
         self.factory.questionsBank.questions.shuffle()
+        let totalQuestions = self.factory.questionsBank.questions.count
+        self.factory.questionsBank.questions.removeLast(totalQuestions - limitQuestions)
         askNextQuestion()
         updateUIElement()
     }
