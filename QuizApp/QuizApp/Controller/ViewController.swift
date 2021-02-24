@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressBar: UIView!
     
+    @IBOutlet weak var imageQuestion: UIImageView!
+    
+    @IBOutlet weak var viewTop: UIView!
+    
     var currentScore = 0
     var currentQuestionID = 0
     var correctQuestionAnswered = 0
@@ -36,6 +40,7 @@ class ViewController: UIViewController {
     }
     
     func startGame() {
+        factory = QuestionsFactory()
         currentScore = 0
         currentQuestionID = 0
         correctQuestionAnswered = 0
@@ -46,6 +51,7 @@ class ViewController: UIViewController {
         self.factory.questionsBank.questions.removeLast(totalQuestions - limitQuestions)
         askNextQuestion()
         updateUIElement()
+        
     }
     
     func askNextQuestion() {
@@ -53,6 +59,23 @@ class ViewController: UIViewController {
             self.currentQuestion = newQuestion
             labelQuestion.text = self.currentQuestion.question
             self.currentQuestionID+=1
+            
+            let fileName = newQuestion.image
+
+            if fileName != "", let imageURL : URL = Bundle.main.url(forResource: fileName, withExtension: "jpg"){
+                print("encuentra imagen")
+                do {
+                    let imageData = try Data(contentsOf: imageURL)
+                    self.imageQuestion.image = UIImage(data: imageData)
+                }
+                catch {
+                    print(error)
+                }
+            }else{
+                print("no hay imagen")
+                self.imageQuestion.image = nil
+            }
+            
         }else{
             gameOver()
         }
@@ -81,6 +104,31 @@ class ViewController: UIViewController {
             }
         }
         
+        for constraint in self.labelQuestion.constraints{
+            print(self.viewTop.frame.height)
+            if self.currentQuestion.image != ""{
+                if constraint.identifier == "labelHeight"{
+                    constraint.constant = self.viewTop.frame.height/2
+                }
+            }else{
+                if constraint.identifier == "labelHeight"{
+                    constraint.constant = self.viewTop.frame.height
+                }
+            }
+            print("label: \(self.labelQuestion.frame.height)")
+        }
+        
+        for constraint in self.imageQuestion.constraints{
+            if self.currentQuestion.image != ""{
+                if constraint.identifier == "imageHeight"{
+                    constraint.constant = self.viewTop.frame.height/2
+                }else{
+                if constraint.identifier == "imageHeight"{
+                    constraint.constant = 0
+                }
+            }
+        }
+        }
     }
     
     func playSound(correct : Bool) {

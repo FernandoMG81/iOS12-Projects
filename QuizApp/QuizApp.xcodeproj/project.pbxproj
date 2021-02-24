@@ -21,6 +21,9 @@
 		3FD0C35F25E0C05F00F42D1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C36125E0C05F00F42D1A /* Localizable.strings */; };
 		3FD0C36E25E1CDF100F42D1A /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C36C25E1CDF100F42D1A /* correct.mp3 */; };
 		3FD0C36F25E1CDF100F42D1A /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C36D25E1CDF100F42D1A /* wrong.mp3 */; };
+		3FD0C37425E5BD3300F42D1A /* vaticano.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C37325E5BD3300F42D1A /* vaticano.jpg */; };
+		3FD0C38725E5DA4400F42D1A /* koala.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C38425E5DA4400F42D1A /* koala.jpg */; };
+		3FD0C38825E5DA4400F42D1A /* pareja.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0C38525E5DA4400F42D1A /* pareja.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +44,13 @@
 		3FD0C35A25E0B9F200F42D1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		3FD0C36025E0C05F00F42D1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3FD0C36325E0C1D600F42D1A /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
-		3FD0C36525E0C1D600F42D1A /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "es-419"; path = "es-419.lproj/QuestionsBank.plist"; sourceTree = "<group>"; };
 		3FD0C36625E0C1D600F42D1A /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3FD0C36C25E1CDF100F42D1A /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
 		3FD0C36D25E1CDF100F42D1A /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
+		3FD0C37325E5BD3300F42D1A /* vaticano.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vaticano.jpg; sourceTree = "<group>"; };
+		3FD0C37625E5C1F400F42D1A /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "es-419"; path = "es-419.lproj/QuestionsBank.plist"; sourceTree = "<group>"; };
+		3FD0C38425E5DA4400F42D1A /* koala.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = koala.jpg; sourceTree = "<group>"; };
+		3FD0C38525E5DA4400F42D1A /* pareja.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pareja.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		3FD0C31925DE09F300F42D1A /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FD0C37225E5BCF400F42D1A /* Images */,
 				3FD0C36B25E1CDB500F42D1A /* Sounds */,
 				3FD0C33125DE0C8700F42D1A /* View */,
 				3FD0C33425DE0CF000F42D1A /* Supporting Files */,
@@ -134,6 +141,16 @@
 				3FD0C36D25E1CDF100F42D1A /* wrong.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		3FD0C37225E5BCF400F42D1A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3FD0C38425E5DA4400F42D1A /* koala.jpg */,
+				3FD0C38525E5DA4400F42D1A /* pareja.jpg */,
+				3FD0C37325E5BD3300F42D1A /* vaticano.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +211,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD0C37425E5BD3300F42D1A /* vaticano.jpg in Resources */,
 				3FD0C35F25E0C05F00F42D1A /* Localizable.strings in Resources */,
 				3FD0C35325E0B8B600F42D1A /* QuestionsBank.plist in Resources */,
 				3FD0C36F25E1CDF100F42D1A /* wrong.mp3 in Resources */,
 				3FD0C32725DE09FC00F42D1A /* LaunchScreen.storyboard in Resources */,
+				3FD0C38825E5DA4400F42D1A /* pareja.jpg in Resources */,
 				3FD0C32425DE09FC00F42D1A /* Assets.xcassets in Resources */,
+				3FD0C38725E5DA4400F42D1A /* koala.jpg in Resources */,
 				3FD0C32225DE09F300F42D1A /* Main.storyboard in Resources */,
 				3FD0C36E25E1CDF100F42D1A /* correct.mp3 in Resources */,
 			);
@@ -247,7 +267,7 @@
 			children = (
 				3FD0C35425E0B8B600F42D1A /* Base */,
 				3FD0C35825E0B8E400F42D1A /* en */,
-				3FD0C36525E0C1D600F42D1A /* es-419 */,
+				3FD0C37625E5C1F400F42D1A /* es-419 */,
 			);
 			name = QuestionsBank.plist;
 			sourceTree = "<group>";

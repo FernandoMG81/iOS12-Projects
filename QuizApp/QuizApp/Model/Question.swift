@@ -12,6 +12,7 @@ class Question : CustomStringConvertible, Codable {
     let question : String
     let answer: Bool
     let explanation : String
+    let image : String
     
     //Se genera para linkear los nombres de los campos en la questionList
     //si son distintos, si son iguales no es necesario
@@ -34,10 +35,11 @@ class Question : CustomStringConvertible, Codable {
         """
     }
     
-    init(text : String, correctAnswer : Bool, answer:String) {
+    init(text : String, correctAnswer : Bool, answer:String, image : String) {
         self.question = text
         self.answer = correctAnswer
         self.explanation = answer
+        self.image = image
     }
 }
 
