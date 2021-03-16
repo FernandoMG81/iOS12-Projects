@@ -13,6 +13,8 @@
 			<true/>
 			<key>explanation</key>
 			<string>En efecto, disponen de tanto dinero que podrían erradicar la pobreza mundial.</string>
+			<key>topic</key>
+			<string>Cultura</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -23,6 +25,8 @@
 			<true/>
 			<key>explanation</key>
 			<string>Uno no puede vivir sin el otro</string>
+			<key>topic</key>
+			<string>Naturaleza</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -33,6 +37,8 @@
 			<false/>
 			<key>explanation</key>
 			<string>Los delfines también practican el sexo por placer</string>
+			<key>topic</key>
+			<string>Ciencia</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -43,6 +49,8 @@
 			<true/>
 			<key>explanation</key>
 			<string>Se estima que unas 30-40 semillas podrían matarnos</string>
+			<key>topic</key>
+			<string>Ciencia</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -53,6 +61,8 @@
 			<false/>
 			<key>explanation</key>
 			<string>El bigote del gato es importante para mantener su estabilidad y orientación</string>
+			<key>topic</key>
+			<string>Naturaleza</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -63,6 +73,8 @@
 			<false/>
 			<key>explanation</key>
 			<string>Un koala no necesita beber absolutamente núnca</string>
+			<key>topic</key>
+			<string>Naturaleza</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -73,6 +85,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Cultura</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -83,6 +97,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Naturaleza</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -93,6 +109,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Naturaleza</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -103,6 +121,8 @@
 			<false/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Naturaleza</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -113,6 +133,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Naturaleza</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -123,6 +145,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Cultura</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -133,6 +157,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Naturaleza</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -143,6 +169,8 @@
 			<false/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Ciencia</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -153,6 +181,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Ciencia</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -163,6 +193,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Naturaleza</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -173,6 +205,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Ciencia</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -183,6 +217,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Cultura</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -193,6 +229,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Cultura</string>
 		</dict>
 		<dict>
 			<key>image</key>
@@ -203,6 +241,8 @@
 			<true/>
 			<key>explanation</key>
 			<string></string>
+			<key>topic</key>
+			<string>Cultura</string>
 		</dict>
 	</array>
 </dict>

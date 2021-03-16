@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     var factory = QuestionsFactory()
     var audioPlayer : AVAudioPlayer!
     let limitQuestions = 10
-
+    var topicQuestion = ""
     
     
     override func viewDidLoad() {
@@ -44,6 +44,9 @@ class ViewController: UIViewController {
         currentScore = 0
         currentQuestionID = 0
         correctQuestionAnswered = 0
+        
+        //Metodo para filtrar por tema seleccionado
+        
         
         //Metodo para mezclar las preguntas
         self.factory.questionsBank.questions.shuffle()
@@ -63,7 +66,6 @@ class ViewController: UIViewController {
             let fileName = newQuestion.image
 
             if fileName != "", let imageURL : URL = Bundle.main.url(forResource: fileName, withExtension: "jpg"){
-                print("encuentra imagen")
                 do {
                     let imageData = try Data(contentsOf: imageURL)
                     self.imageQuestion.image = UIImage(data: imageData)
@@ -72,7 +74,6 @@ class ViewController: UIViewController {
                     print(error)
                 }
             }else{
-                print("no hay imagen")
                 self.imageQuestion.image = nil
             }
             
@@ -86,7 +87,7 @@ class ViewController: UIViewController {
         //metodo para cuando no hay mas preguntas
         let alert = UIAlertController(title: NSLocalizedString("game.over.title", comment: "Titulo del pop up del game over"), message: "\(NSLocalizedString("game.over.message1", comment: "")) \(self.correctQuestionAnswered) / \(self.currentQuestionID). \(NSLocalizedString("game.over.message2", comment: ""))", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            self.startGame()
+            self.dismiss(animated: true)
         }
         
         alert.addAction(okAction)
@@ -105,29 +106,27 @@ class ViewController: UIViewController {
         }
         
         for constraint in self.labelQuestion.constraints{
-            print(self.viewTop.frame.height)
             if self.currentQuestion.image != ""{
                 if constraint.identifier == "labelHeight"{
                     constraint.constant = self.viewTop.frame.height/2
                 }
-            }else{
-                if constraint.identifier == "labelHeight"{
-                    constraint.constant = self.viewTop.frame.height
+                }else{
+                    if constraint.identifier == "labelHeight"{
+                        constraint.constant = self.viewTop.frame.height
+                    }
                 }
-            }
-            print("label: \(self.labelQuestion.frame.height)")
         }
         
         for constraint in self.imageQuestion.constraints{
             if self.currentQuestion.image != ""{
-                if constraint.identifier == "imageHeight"{
-                    constraint.constant = self.viewTop.frame.height/2
+                    if constraint.identifier == "imageHeight"{
+                        constraint.constant = self.viewTop.frame.height/2
                 }else{
-                if constraint.identifier == "imageHeight"{
-                    constraint.constant = 0
+                    if constraint.identifier == "imageHeight"{
+                        constraint.constant = 0
+                    }
                 }
             }
-        }
         }
     }
     
@@ -191,6 +190,7 @@ class ViewController: UIViewController {
             ProgressHUD.showError("\(NSLocalizedString("question.ko", comment: ""))\n\(self.currentQuestion.explanation)")
             playSound(correct: false)
         }
+//      Delay para mostrar la siguiente pregunta
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.askNextQuestion()
             self.updateUIElement()
