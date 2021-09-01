@@ -10,9 +10,12 @@ import Foundation
 class QuestionsFactory {
     
     var questionsBank : QuestionsBank!
-    
+    //var topicSelected : String
+    var questions = [Question]()
     
     init() {
+        
+        //self.topicSelected = topic
         //PROCESADO MANUAL DE PLIST
         /*
         if let path = Bundle.main.path(forResource: "QuestionsBank", ofType: "plist"){
@@ -20,8 +23,13 @@ class QuestionsFactory {
                 let questionData = plist["questions"] as! [AnyObject]
                 
                 for question in questionData{
-                    if let text = question["question"], let ans = question["answer"], let expl = question["explanation"]{
-                        questions.append(Question(text: text as! String, correctAnswer: ans as! Bool, answer: expl as! String))
+                    if let text = question["question"], let ans = question["answer"], let expl = question["explanation"], let img = question["image"], let top = question["topic"]{
+                        if self.topicSelected == top as! String{
+                            questions.append(Question(text: text as! String, correctAnswer: ans as! Bool, answer: expl as! String, image: img as! String, topic: top as! String))
+                        }
+                        if self.topicSelected == "all"{
+                            questions.append(Question(text: text as! String, correctAnswer: ans as! Bool, answer: expl as! String, image: img as! String, topic: top as! String))
+                        }
                     }
                 }
             }
@@ -38,8 +46,8 @@ class QuestionsFactory {
         } catch {
             print(error)
         }
-        
     }
+   
     
     func getQuestionAt(index: Int) -> Question?{
         

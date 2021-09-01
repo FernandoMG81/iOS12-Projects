@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startGame()
-     
+        print("Topic VC: \(topicQuestion)")
     }
     
     func startGame() {
@@ -46,15 +46,27 @@ class ViewController: UIViewController {
         correctQuestionAnswered = 0
         
         //Metodo para filtrar por tema seleccionado
-        
+        self.factory.questionsBank.questions = getTopicQuestion()
         
         //Metodo para mezclar las preguntas
         self.factory.questionsBank.questions.shuffle()
-        let totalQuestions = self.factory.questionsBank.questions.count
-        self.factory.questionsBank.questions.removeLast(totalQuestions - limitQuestions)
+//        let totalQuestions = self.factory.questionsBank.questions.count
+//        self.factory.questionsBank.questions.removeLast(totalQuestions -      limitQuestions)
         askNextQuestion()
         updateUIElement()
         
+    }
+    
+    func getTopicQuestion() -> [Question] {
+        var newArrayQuestions : [Question] = []
+        if let factory = factory.questionsBank {
+            for fact in factory.questions {
+                if fact.topic == self.topicQuestion {
+                    newArrayQuestions.append(fact)
+                }
+            }
+        }
+        return newArrayQuestions
     }
     
     func askNextQuestion() {

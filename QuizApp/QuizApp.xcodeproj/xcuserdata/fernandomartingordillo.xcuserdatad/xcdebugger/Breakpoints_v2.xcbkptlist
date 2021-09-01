@@ -14,8 +14,8 @@
             filePath = "QuizApp/Controller/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "updateUIElement()"
             landmarkType = "7">
          </BreakpointContent>

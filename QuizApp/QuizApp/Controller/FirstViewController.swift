@@ -39,10 +39,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //    MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "ShowQuestionTopic"{
+        if segue.identifier == "showQuestionsForTopic"{
             let destinationVC = segue.destination as! ViewController
             let idx = self.tableView.indexPathForSelectedRow!.row
             destinationVC.topicQuestion = self.questionTopic[idx]
+            destinationVC.modalPresentationStyle = .fullScreen
         }
     }
     
@@ -59,6 +60,19 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "topicCell", for: indexPath)
         
         cell.textLabel?.text = self.questionTopic[indexPath.row]
+        cell.textLabel?.textAlignment = .center
+        
+        switch indexPath.row {
+        case 0:
+            cell.textLabel?.backgroundColor = .cyan
+        case 1:
+            cell.textLabel?.backgroundColor = .red
+        case 2:
+            cell.textLabel?.backgroundColor = .green
+        default:
+            cell.textLabel?.backgroundColor = .darkGray
+        }
+        
         return cell
     }
     
@@ -67,7 +81,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         let qTopic = self.questionTopic[row]
-        print(qTopic)
+        print("qtopic: \(qTopic)")
+    
     }
 }
 
