@@ -37,11 +37,17 @@ class ViewController: UIViewController {
             print(doc.title)
             
             for div in doc.css("div"){
+                if div["class"] == "songs-list-row__rank"{
+                    let rank = div.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+                    print(rank)
+                }
                 if div["class"] == "songs-list-row__song-name"{
-                    print(div.text)
+                    let song = div.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+                    print(song)
                 }
                 if div["class"] == "songs-list-row__by-line"{
-                    print(div.text)
+                    let artist = div.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+                    print(artist)
                 }
             }
             
